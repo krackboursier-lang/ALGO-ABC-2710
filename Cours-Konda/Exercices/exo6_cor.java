@@ -1,4 +1,5 @@
-    public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
+    public static void main(String[] args) { 
+    
 
           /***--------  Début du code  -------------------****/
 
