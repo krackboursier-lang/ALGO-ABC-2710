@@ -15,11 +15,11 @@ exo6_cor{ /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
           Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
 
           System.out.println("Quel est votre prénom ?"); // Affiche un message
-          prenom = clavier.nextLine(); // On affecte une valeur Scanner de type text à prénom
-          System.out.println("Quel est votre âge");// Affiche un message
-          age = clavier.nextInt();// On affecte une valeur Scanner de type entier à âge
+          prenom = clavier.nextString(); 
+          System.out.println("Quel est votre âge"); // Affiche un message
+          age = clavier.nextInt();
           
-          System.out.println("Bonjour, je m'appelle "+prenom+" j'ai "+age+" ans"); 
+          System.out.println("Bonjour, je m'appelle "+ prenom +" j'ai "+ age +" ans"); 
 
         clavier.close();
 
