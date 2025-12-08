@@ -1,4 +1,6 @@
-importjava.util.Scanner; 
+package exercices;
+
+import java.util.Scanner; 
 
 exo6_cor{ /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
@@ -19,7 +21,7 @@ exo6_cor{ /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
           System.out.println("Quel est votre âge"); // Affiche un message
           age = clavier.nextInt();
           
-          System.out.println("Bonjour, je m'appelle "+ prenom +" j'ai "+ age +" ans"); 
+          System.out.println("Bonjour, je m'appelle "+prenom+" j'ai "+age+" ans"); 
 
         clavier.close();
 
