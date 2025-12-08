@@ -1,26 +1,33 @@
-package Exercices;
+package exercices;
+
 import java.util.Scanner; 
+
 public class exo1_corrige {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        // Demander à l'utilisateur de saisir les deux entiers
-        System.out.print("Entrez le premier entier (a) : ");
-        int a = scanner.nextInt();
+    public static void main(String[] args) { 
 
-        System.out.print("Entrez le deuxième entier (b) : ");
-        int b = scanner.nextInt();
+          /***--------  Début du code  -------------------****/
+        
+          /* Déclaration des variables */
+          int a;
+          int b;
+          int addition;
 
-        // Calculer le résultat de l'addition
-        int resultat = a + b;
+          Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
 
-        // Afficher les résultats
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-        System.out.println("resultat = a + b");
-        System.out.println("resultat vaut " + resultat);
+          System.out.println("La valeur de a"); // Affiche un message
+          a = clavier.nextInt(); // On affecte une valeur Scanner de type entier à A
+          System.out.println("La valeur de b");// Affiche un message
+          b = clavier.nextInt();// On affecte une valeur Scanner de type entier à B
 
-        // Fermer le scanner
-        scanner.close();
+          addition = a+b; //calcul la somme
+
+          System.out.println("a+b= "+addition); /* Afficher votre instruction , concaténation pour la phrase dynamique */
+
+        clavier.close();
+
+        /***--------  Fin du code  -------------------****/
+
     }
+
 }
