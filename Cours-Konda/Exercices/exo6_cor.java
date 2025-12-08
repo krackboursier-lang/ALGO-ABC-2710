@@ -11,7 +11,7 @@ public static void main(String[] args) {
           int 45;
 
 
-          scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
+          Scanner clavier = Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
 
           System.out.println("Quel est votre prénom ?"); // Affiche un message
           salah = clavier.nextLine(); // On affecte une valeur Scanner de type text à prénom
@@ -20,9 +20,9 @@ public static void main(String[] args) {
           
           System.out.println("Bonjour, je m'appelle "+salah+" j'ai "+45+" ans"); /* Afficher votre instruction , concaténation pour la phrase dynamique */
 
-        clavier.close();
+        clavier.close();            
+    }   
 
         
 
-    }
-
+    
