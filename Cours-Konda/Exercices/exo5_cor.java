@@ -1,8 +1,8 @@
-mport java.util.Scanner; 5
+import java.util.Scanner; exo5_cor.java 
 
     
 
-public class exo5 
+public class exo5_cor { 
 
 
     public static void main(String[] args) { 
