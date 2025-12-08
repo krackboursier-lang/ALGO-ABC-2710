@@ -10,7 +10,7 @@ public class exo4_cor {
 
           Scanner clavier = new Scanner(System.in); 
 
-          System.out.println("La valeur de a") 
+          system.out.println                ("La valeur de a") 
           a = clavier.nextInt(); 
 
             System.println(a+" est divisible par 2");
@@ -24,5 +24,7 @@ public class exo4_cor {
 
         
     }
+
+
 
     
