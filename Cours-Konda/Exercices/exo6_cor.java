@@ -19,11 +19,11 @@ exo6_cor{ /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
           System.out.println("Quel est votre âge");// Affiche un message
           age = clavier.nextInt();// On affecte une valeur Scanner de type entier à âge
           
-          System.out.println("Bonjour, je m'appelle "+prenom+" j'ai "+age+" ans"); /* Afficher votre instruction , concaténation pour la phrase dynamique */
+          System.out.println("Bonjour, je m'appelle "+prenom+" j'ai "+age+" ans"); 
 
         clavier.close();
 
-        /***--------  Fin du code  -------------------****/
+        
 
     }
 
