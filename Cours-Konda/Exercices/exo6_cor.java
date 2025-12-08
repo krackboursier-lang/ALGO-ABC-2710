@@ -1,6 +1,6 @@
 importjava.util.Scanner; 
 
-exo6_cor.java { /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
+exo6_cor{ /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
 
     public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
