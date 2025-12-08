@@ -1,13 +1,17 @@
-import java.util.Scanner;   
+package exercices;
+import java.util.Scanner;
+
+public class exo4_cor {
+   
 
 
 
      int a;
 
-          Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
+          Scanner clavier = new Scanner(System.in); 
 
-          System.out.println("La valeur de a") // Affiche un message
-          a = clavier.nextInt(); // if (a%2==0){
+          System.out.println("La valeur de a") 
+          a = clavier.nextInt(); 
 
             System.println(a+" est divisible par 2");
         }else{
@@ -18,6 +22,7 @@ import java.util.Scanner;
 
         clavier.close();
 
-        /***--------  Fin du code  -------------------****/
-
+        
     }
+
+    

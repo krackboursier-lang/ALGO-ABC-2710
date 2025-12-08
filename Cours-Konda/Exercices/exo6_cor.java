@@ -5,23 +5,19 @@ import java.util.Scanner;
 public class exo6_cor {
 
     
- /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
 
-     public static void main(String[] args)  { /* Toujours le mettre pour tester votre code */
-
-          /***--------  Début du code  -------------------****/
-
-          /* Déclaration des variables */
+     public static void main(String[] args)  { 
+          
           String prenom;
           int age;
 
 
-          Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
+          Scanner clavier = new Scanner(System.in); 
 
-          System.out.println("Quel est votre prénom ?"); // Affiche un message
+          System.out.println("Quel est votre prénom ?"); 
           prenom = clavier.next(); 
-          System.out.println("Quel est votre âge"); // Affiche un message
+          System.out.println("Quel est votre âge"); 
           age = clavier.nextInt();
           
           System.out.println("Bonjour, je m'appelle "+prenom+" j'ai "+age+" ans"); 

@@ -3,16 +3,16 @@ package exercices;
 import java .util.Scanner; 
 
 public class exo7_cor { 
-    public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
+    public static void main(String[] args) { 
 
-       String response; //  Déclaration d'une variable a de Type String */
+       String response;
 
 
-        System.out.println("Do you speak english ?"); /* Afficher le message pour votre question */
+        System.out.println("Do you speak english ?"); 
           
-          Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
+          Scanner clavier = new Scanner(System.in);  
 
-          response = clavier.nextLine(); // Affection de la valeur Scanner tapé sur le clavier à la variable response
+          response = clavier.nextLine(); 
 
         if(response.equalsIgnoreCase(("y"))){
 

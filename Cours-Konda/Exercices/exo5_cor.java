@@ -1,7 +1,7 @@
-import java.util.Scanner; exo5_cor.java 
+package exercices;  
+import java.util.Scanner; 
 
-    
-
+  
 public class exo5_cor { 
 
 
@@ -26,9 +26,9 @@ public class exo5_cor {
           c = clavier.nextDouble();
 
 
-          equation = a*b/c; n
+          equation = a*b/c;
 
-          System.out.println("a x b / c= "+equation); 
+          system.out.println("a x b / c= "+equation); 
 
 
           if(equation<10){ 
@@ -54,3 +54,5 @@ public class exo5_cor {
     }
 
 }
+
+
