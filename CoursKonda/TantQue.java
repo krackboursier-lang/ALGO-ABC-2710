@@ -1,5 +1,4 @@
-import java.util.Scanner;
-
+package CoursKonda;
 public class TantQue {
 
     public static void main(String[] args) {
