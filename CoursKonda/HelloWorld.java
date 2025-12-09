@@ -1,4 +1,4 @@
-package intro;
+package CoursKonda;
 
 public class HelloWorld {
 

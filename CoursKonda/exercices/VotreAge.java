@@ -1,6 +1,4 @@
-
-package entrainement;
-
+package CoursKonda.exercices;
 
 import java.util.Scanner;
 

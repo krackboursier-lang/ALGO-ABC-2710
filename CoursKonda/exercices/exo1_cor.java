@@ -1,4 +1,4 @@
-package exercices;
+package CoursKonda.exercices;
 
 import java.util.Scanner; 
 
@@ -17,7 +17,9 @@ public class exo1_cor{
           a = clavier.nextInt(); 
           System.out.println("La valeur de b");
 
+            b = clavier.nextInt();
           addition = a + b; 
+    
 
           System.out.println("a+b= "+addition); 
         clavier.close();
