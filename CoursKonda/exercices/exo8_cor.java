@@ -1,4 +1,4 @@
-package CoursKonda.exercices;   
+
 import java.util.Scanner; 
 
 public class exo8_cor { 

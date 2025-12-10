@@ -1,4 +1,3 @@
-package CoursKonda.exercices; 
 
 import java .util.Scanner; 
 

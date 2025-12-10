@@ -1,4 +1,4 @@
-package CoursKonda;
+
 import java.util.Scanner;
 
 /*  Voici comment marche le switch */
