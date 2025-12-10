@@ -22,7 +22,7 @@ public class exo20_cor {
        
         if (totalVotes > TOTAL_VOTANTS) {
             System.out.println("Erreur : Le total des votes dépasse le nombre de votants !");
-            return;
+        
 
         } else if (totalVotes <= TOTAL_VOTANTS) {
             votesBlancs = TOTAL_VOTANTS - totalVotes;

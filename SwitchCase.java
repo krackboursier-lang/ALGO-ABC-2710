@@ -1,7 +1,6 @@
-  
-  import java.util.Scanner;
+import java.util.Scanner;
 
-/*  Voici comment marche le switch */
+
 
 public class SwitchCase {public static void main(String[] args) {
 

@@ -3,10 +3,8 @@ import java.util.Scanner;
     
 public class exo14_cor { 
 
-
     public static void main(String[] args) { 
 
-         
 
           boolean a; 
 

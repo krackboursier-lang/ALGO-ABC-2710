@@ -1,13 +1,11 @@
 import java.util.Scanner;
 
-/*  Voici comment marche le switch */
-
 public class VotreAge {
  
     public static void main(String[] args) {
 
 
-         Scanner clavier = new Scanner(System.in); //* Initialsiation du scanner */
+         Scanner clavier = new Scanner(System.in); 
 
         int age;
         int ageRank=0;
@@ -16,17 +14,17 @@ public class VotreAge {
 
         age = clavier.nextInt();
 
-            if(age>=0 && age<=2){ageRank=1;} //* Bébé */
-            if(age>2 && age<=8){ageRank=2;} //* Enfant */
-            if(age>8 && age<=13){ageRank=3;} //* Pré ados */
-            if(age>14 && age<=17){ageRank=4;} //* Adolesecent */
-            if(age>17 && age<=25){ageRank=5;} //* Jeune adulte */
-          if(age>25 && age<=39){ageRank=6;} //* Aadulte */
-          if(age>39 && age<=50){ageRank=7;} //* Adulte mure */
-          if(age>50){ageRank=8;} //* Adulte mure */
+            if(age>=0 && age<=2){ageRank=1;} 
+            if(age>2 && age<=8){ageRank=2;} 
+            if(age>8 && age<=13){ageRank=3;} 
+            if(age>14 && age<=17){ageRank=4;} 
+            if(age>17 && age<=25){ageRank=5;} 
+          if(age>25 && age<=39){ageRank=6;} 
+          if(age>39 && age<=50){ageRank=7;} 
+          if(age>50){ageRank=8;} 
 
-        switch(ageRank){ /* On initialise le switch avec la variable age , on va tester si age à les valeurs suivantes */
-            /* En fonction des valeurs le message change */
+        switch(ageRank){ 
+            
             case 1:
                 System.out.println("Vous êtes un bébé");
                 break;
