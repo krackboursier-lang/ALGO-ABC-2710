@@ -1,4 +1,4 @@
-
+package   JalonBlancexo_1; 
   import java.util.Scanner;
 
 public class JalonBlancexo_1 {

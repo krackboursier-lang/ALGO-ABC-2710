@@ -1,4 +1,5 @@
-  import java.util.Scanner;   
+ package   exoParNiv;
+ import java.util.Scanner;   
 
 public class exoNiv3_cor {
     public static void main(String[] args) {
