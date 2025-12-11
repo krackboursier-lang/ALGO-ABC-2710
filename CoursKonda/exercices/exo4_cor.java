@@ -1,4 +1,4 @@
-package exercices;
+
 import java.util.Scanner;
 
 public class exo4_cor
