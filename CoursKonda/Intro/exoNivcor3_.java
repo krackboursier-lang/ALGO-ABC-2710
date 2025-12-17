@@ -1,7 +1,7 @@
- package   exoParNiv;
+ 
  import java.util.Scanner;   
 
-public class exoNiv3_cor {
+public class exoNivcor3_ {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
