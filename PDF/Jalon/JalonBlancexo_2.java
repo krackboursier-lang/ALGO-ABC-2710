@@ -1,29 +1,33 @@
 
     import java.util.Scanner;
 
-public class JalonBlancexo_2 {
+public class JalonBlancexo_2  {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int reste = 100; // 1L = 100 cl
-
-        while (reste > 0) {
-            System.out.printf("Vous avez %dcl dans votre bouteille, combien de centilitre vous voulez boire ? : ", reste);
-            int quantite = scanner.nextInt();
-
-            if (quantite > reste) {
-                quantite = reste; 
-
-            reste -= quantite;
-            System.out.printf("Vous avez bu %dcl. ", quantite);
-
-            if (reste == 0) {
-                System.out.println("Votre bouteille est vide.");
+        int bouteille = 100; // Contenu initial en centilitres
+        
+        while (bouteille > 0) {
+            System.out.print("Vous avez " + bouteille + 
+                             "cl dans votre bouteille, combien de centilitre vous voulez boire ? :\n");
+            int boire = scanner.nextInt();
+            
+            if (boire > bouteille) {
+                System.out.println("Vous ne pouvez pas boire plus que ce qu'il reste !");
+                continue;
+            }
+            
+            bouteille -= boire;
+            
+            if (bouteille == 0) {
+                System.out.println("Vous avez bu " + boire + 
+                                   "cl. Votre bouteille est vide.");
             } else {
-                System.out.printf("Il reste encore %dcl dans votre bouteille.%n", reste);
+                System.out.println("Vous avez bu " + boire + 
+                                   "cl. Il reste encore " + bouteille + 
+                                   "cl dans votre bouteille.");
             }
         }
+        
+        scanner.close();
     }
 }
-}
-
-
