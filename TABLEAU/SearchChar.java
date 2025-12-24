@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exo3_4 {
+public class SearchChar {
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
