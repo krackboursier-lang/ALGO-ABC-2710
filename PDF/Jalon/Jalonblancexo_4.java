@@ -1,4 +1,4 @@
-import java.util.Scanner;  
+import java.util.Scanner;
 
 public class Jalonblancexo_4 {
     public static void main(String[] args) {
@@ -13,8 +13,6 @@ public class Jalonblancexo_4 {
             System.out.println("La valeur est impaire.");
         }
         scanner.close();
-    
 
     }
 }
-

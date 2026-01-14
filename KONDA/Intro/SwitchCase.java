@@ -7,8 +7,7 @@ public class SwitchCase {
 
     public static void main(String[] args) {
 
-
-         Scanner clavier = new Scanner(System.in); //* Initialsiation du scanner */
+        Scanner clavier = new Scanner(System.in); // * Initialsiation du scanner */
 
         int age;
 
@@ -16,7 +15,10 @@ public class SwitchCase {
 
         age = clavier.nextInt();
 
-        switch(age){ /* On initialise le switch avec la variable age , on va tester si age à les valeurs suivantes */
+        switch (age) { /*
+                        * On initialise le switch avec la variable age , on va tester si age à les
+                        * valeurs suivantes
+                        */
             /* En fonction des valeurs le message change */
             case 2:
                 System.out.println("Vous êtes un bébé");
@@ -26,32 +28,30 @@ public class SwitchCase {
                 System.out.println("Vous êtes un enfant");
                 break;
             case 8:
-                 System.out.println("Vous êtes un pré-ados");
+                System.out.println("Vous êtes un pré-ados");
                 break;
             case 13:
-                 System.out.println("Vous êtes un Adolescents");
+                System.out.println("Vous êtes un Adolescents");
                 break;
-            case 21 :
-                 System.out.println("Vous êtes un jeune Adulte");
+            case 21:
+                System.out.println("Vous êtes un jeune Adulte");
                 break;
-            case 25 :
-                 System.out.println("Vous êtes un adulte");
+            case 25:
+                System.out.println("Vous êtes un adulte");
                 break;
-            case 40 :
-                 System.out.println("Vous êtes un adulte mure");
+            case 40:
+                System.out.println("Vous êtes un adulte mure");
                 break;
-            case 60 :
-                 System.out.println("Vous êtes un senior");
+            case 60:
+                System.out.println("Vous êtes un senior");
                 break;
             default:
                 System.out.println("Age inconnu");
 
         }
 
-
         clavier.close();
-        
 
     }
-    
+
 }

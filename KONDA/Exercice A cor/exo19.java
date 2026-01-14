@@ -19,54 +19,51 @@
 
 import java.util.Scanner; /* Importation de la bibliothèque Java Scanner */
 
-    /***--------Donner un nom à votre class -------------------****/
+/*** --------Donner un nom à votre class ------------------- ****/
 
 public class exo19 { /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
+   public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
 
-    public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
+      /*** -------- Début du code ------------------- ****/
 
-          /***--------  Début du code  -------------------****/
+      int sec; /* Déclaration d'une variable de Type Entier */
+      String digith = "";
+      String digitm = "";
+      String digits = "";
 
-          int sec; /*  Déclaration d'une variable de Type Entier */
-          String digith="";
-          String digitm="";
-          String digits="";
+      Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner */
 
-          Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner */
+      System.out.println(" Le nombre de seconde :");
+      sec = clavier.nextInt();
 
-          System.out.println(" Le nombre de seconde :");
-             sec = clavier.nextInt();
+      int h = sec / 3600;
+      int m = (sec % 3600) / 60;
+      int s = (sec % 60);
 
-             int h = sec/3600;
-             int m = (sec % 3600)/60;
-             int s = (sec % 60);
+      if (h < 10) {
 
-             if(h<10){
+         digith = "0";
 
-                digith="0";
+      }
 
-             }
+      if (m < 10) {
 
-             if(m<10){
+         digitm = "0";
 
-                digitm="0";
+      }
 
-             }
+      if (s < 10) {
 
-             if(s<10){
+         digits = "0";
 
-                digits="0";
+      }
 
-             }
+      System.out.println(digith + h + " heure(s) " + digitm + m + " minute(s) " + digits + s + " seconde(s)");
 
+      clavier.close();
+      /*** -------- Fin du code ------------------- ****/
 
-          System.out.println(digith+h+" heure(s) "+digitm+m+" minute(s) "+digits+s+" seconde(s)");
-
-          clavier.close();
-        /***--------  Fin du code  -------------------****/
-
-    }
+   }
 
 }
-

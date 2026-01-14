@@ -1,7 +1,7 @@
 
-    import java.util.Scanner;
+import java.util.Scanner;
 
-public class Exo2_2 {  
+public class Exo2_2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

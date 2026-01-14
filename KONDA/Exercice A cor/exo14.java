@@ -17,47 +17,42 @@
 
 import java.util.Scanner; /* Importation de la bibliothèque Java Scanner */
 
-    /***--------Donner un nom à votre class -------------------****/
+/*** --------Donner un nom à votre class ------------------- ****/
 
 public class exo14 { /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
-
     public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
 
-          /***--------  Début du code  -------------------****/
+        /*** -------- Début du code ------------------- ****/
 
-          boolean a; /*  Déclaration d'une variable de Type Booléen */
+        boolean a; /* Déclaration d'une variable de Type Booléen */
 
-          boolean b; /*  Déclaration d'une variable de Type Booléen */
+        boolean b; /* Déclaration d'une variable de Type Booléen */
 
-          boolean c; /*  Déclaration d'une variable de Type Booléen */
+        boolean c; /* Déclaration d'une variable de Type Booléen */
 
-          boolean result;
+        boolean result;
 
+        Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner */
 
-          Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner */
-          
-          System.out.println("a est TRUE ou FALSE"); /* Afficher votre instruction */
+        System.out.println("a est TRUE ou FALSE"); /* Afficher votre instruction */
 
-          a = clavier.nextBoolean(); 
+        a = clavier.nextBoolean();
 
-          System.out.println("b est TRUE ou FALSE"); /* Afficher votre instruction */
+        System.out.println("b est TRUE ou FALSE"); /* Afficher votre instruction */
 
-          b = clavier.nextBoolean(); 
+        b = clavier.nextBoolean();
 
-          System.out.println("c est TRUE ou FALSE"); /* Afficher votre instruction */
+        System.out.println("c est TRUE ou FALSE"); /* Afficher votre instruction */
 
-          c = clavier.nextBoolean(); 
+        c = clavier.nextBoolean();
 
-          result = a || b && !c;
+        result = a || b && !c;
 
-          System.out.println("Résultat :" + result); /* Afficher votre instruction */
+        System.out.println("Résultat :" + result); /* Afficher votre instruction */
 
-
-
-        /***--------  Fin du code  -------------------****/
+        /*** -------- Fin du code ------------------- ****/
 
     }
 
 }
-

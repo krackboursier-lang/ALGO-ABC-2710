@@ -1,3 +1,4 @@
+
 /* EXO15 : Avec PRINT & SCANNER : Me créer un convertisseur de devise, Euros , Dollars et Livres Sterling
  * 
  * Vous devriez choisir votre devise en entrée et la devise en sortie
@@ -33,144 +34,137 @@
 */
 import java.util.Scanner; /* Importation de la bibliothèque Java Scanner */
 
-    /***--------Donner un nom à votre class -------------------****/
+/*** --------Donner un nom à votre class ------------------- ****/
 
 public class exo15 { /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
-
     public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
 
-          /***--------  Début du code  -------------------****/
+        /*** -------- Début du code ------------------- ****/
 
-          double amountStart; /*  Déclaration d'une variable de Type décimal */
-          String currencyStart; /*  Déclaration d'une variable de Type chaine de caractère */
-          String currencyEnd; /*  Déclaration d'une variable de Type chaine de caractère */
-          double amountEnd; /*  Déclaration d'une variable de Type décimal */
+        double amountStart; /* Déclaration d'une variable de Type décimal */
+        String currencyStart; /* Déclaration d'une variable de Type chaine de caractère */
+        String currencyEnd; /* Déclaration d'une variable de Type chaine de caractère */
+        double amountEnd; /* Déclaration d'une variable de Type décimal */
 
-          Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner 
-              Quel est votre monnaie ? */
+        Scanner clavier = new Scanner(System.in); /*
+                                                   * Déclaration du scanner Instance de l'Objet Scanner
+                                                   * Quel est votre monnaie ?
+                                                   */
 
-         System.out.println("Quel est votre monnaie ?");
-         currencyStart = clavier.nextLine().toUpperCase(); 
+        System.out.println("Quel est votre monnaie ?");
+        currencyStart = clavier.nextLine().toUpperCase();
 
-         System.out.println("Vous voulez la convertir en quelle devise ?");
-         currencyEnd = clavier.nextLine().toUpperCase(); 
+        System.out.println("Vous voulez la convertir en quelle devise ?");
+        currencyEnd = clavier.nextLine().toUpperCase();
 
-         System.out.println("Quel est votre montant ?");
-         amountStart = clavier.nextDouble(); 
+        System.out.println("Quel est votre montant ?");
+        amountStart = clavier.nextDouble();
 
+        if (!(currencyStart.equals(currencyEnd))
+                &&
+                (
 
+                currencyStart.equals("EUR") ||
+                        currencyStart.equals("USD") ||
+                        currencyStart.equals("GBP")
 
-         if(!(currencyStart.equals(currencyEnd)) 
-         && 
-         (
-            
-         currencyStart.equals("EUR") || 
-         currencyStart.equals("USD") ||
-         currencyStart.equals("GBP") 
+                )
+                &&
+                (
 
-         ) 
-         &&
-         (
-            
-         currencyEnd.equals("EUR") || 
-         currencyEnd.equals("USD") ||
-         currencyEnd.equals("GBP") 
-         
-         ) 
-         
-         )
-         
-         {
+                currencyEnd.equals("EUR") ||
+                        currencyEnd.equals("USD") ||
+                        currencyEnd.equals("GBP")
 
-            switch(currencyStart) {
+                )
+
+        )
+
+        {
+
+            switch (currencyStart) {
 
                 case "EUR":
 
-                        switch(currencyEnd) {
+                    switch (currencyEnd) {
 
-                            case "USD":
-                            amountEnd = amountStart * 1.1092;
-                            amountEnd = Math.round(amountEnd*100);
-                            amountEnd /=100;
-                            System.out.println("Résultat:"+amountEnd);
-                            break;
-
-                            
-                            case "GBP":
-                            amountEnd = amountStart * 0.8419;
-                            amountEnd = Math.round(amountEnd*100);
-                            amountEnd /=100;
-                            System.out.println("Résultat:"+amountEnd);
-                            break;
-
-                        }
-
-                  break;
-
-                  case "USD":
-
-                  switch(currencyEnd) {
-
-                      case "EUR":
-                      amountEnd = amountStart * 0.9018;
-                      amountEnd = Math.round(amountEnd*100);
-                      amountEnd /=100;
-                      System.out.println("Résultat:"+amountEnd);
-                      break;
-
-                      
-                      case "GBP":
-                      amountEnd = amountStart * 0.7593;
-                      amountEnd = Math.round(amountEnd*100);
-                      amountEnd /=100;
-                      System.out.println("Résultat:"+amountEnd);
-                      break;
-
-                  }
-
-            break;     
-            
-                    case "GBP":
-
-                    switch(currencyEnd) {
-
-                        case "EUR":
-                        amountEnd = amountStart * 1.1877;
-                        amountEnd = Math.round(amountEnd*100);
-                        amountEnd /=100;
-                        System.out.println("Résultat:"+amountEnd);
-                        break;
-
-                        
                         case "USD":
-                        amountEnd = amountStart * 0.9018;
-                        amountEnd = Math.round(amountEnd*100);
-                        amountEnd /=100;
-                        System.out.println("Résultat:"+amountEnd);
-                        break;
+                            amountEnd = amountStart * 1.1092;
+                            amountEnd = Math.round(amountEnd * 100);
+                            amountEnd /= 100;
+                            System.out.println("Résultat:" + amountEnd);
+                            break;
+
+                        case "GBP":
+                            amountEnd = amountStart * 0.8419;
+                            amountEnd = Math.round(amountEnd * 100);
+                            amountEnd /= 100;
+                            System.out.println("Résultat:" + amountEnd);
+                            break;
 
                     }
 
-            break;      
+                    break;
+
+                case "USD":
+
+                    switch (currencyEnd) {
+
+                        case "EUR":
+                            amountEnd = amountStart * 0.9018;
+                            amountEnd = Math.round(amountEnd * 100);
+                            amountEnd /= 100;
+                            System.out.println("Résultat:" + amountEnd);
+                            break;
+
+                        case "GBP":
+                            amountEnd = amountStart * 0.7593;
+                            amountEnd = Math.round(amountEnd * 100);
+                            amountEnd /= 100;
+                            System.out.println("Résultat:" + amountEnd);
+                            break;
+
+                    }
+
+                    break;
+
+                case "GBP":
+
+                    switch (currencyEnd) {
+
+                        case "EUR":
+                            amountEnd = amountStart * 1.1877;
+                            amountEnd = Math.round(amountEnd * 100);
+                            amountEnd /= 100;
+                            System.out.println("Résultat:" + amountEnd);
+                            break;
+
+                        case "USD":
+                            amountEnd = amountStart * 0.9018;
+                            amountEnd = Math.round(amountEnd * 100);
+                            amountEnd /= 100;
+                            System.out.println("Résultat:" + amountEnd);
+                            break;
+
+                    }
+
+                    break;
 
                 default:
-                System.out.println("Erreur lors de la conversion"); /* Afficher votre instruction */
-                  // code block
-              }
-              
+                    System.out.println("Erreur lors de la conversion"); /* Afficher votre instruction */
+                    // code block
+            }
 
-         }else{
+        } else {
 
             System.out.println("Les devise sont identiques ou inconnus"); /* Afficher votre instruction */
-            
-          }
 
+        }
 
-          clavier.close();
+        clavier.close();
 
-
-        /***--------  Fin du code  -------------------****/
+        /*** -------- Fin du code ------------------- ****/
 
     }
 

@@ -13,7 +13,7 @@ public class CompteurOccurencesLettres {
             texte = scanner.nextLine();
         }
         // Convertir le texte en minuscules pour ignorer la casse
-        texte = texte.toLowerCase(); 
+        texte = texte.toLowerCase();
 
         // Créer une map pour stocker le nombre d'occurrences de chaque lettre
         Map<Character, Integer> occurrences = new HashMap<>();

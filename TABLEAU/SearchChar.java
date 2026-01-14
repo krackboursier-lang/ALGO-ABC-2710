@@ -79,4 +79,3 @@ public class SearchChar {
         sc.close();
     }
 }
- 

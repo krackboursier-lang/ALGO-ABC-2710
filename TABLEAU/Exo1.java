@@ -1,5 +1,4 @@
 
-
 //import java.util.Scanner;
 //import java.util.Random;
 import java.util.*;
@@ -40,19 +39,17 @@ public class Exo1 {
                 position = i;
                 break;
             }
-// On pourrait aussi faire un while pour eviter le "break"...
+            // On pourrait aussi faire un while pour eviter le "break"...
         }
 
         if (!trouve) {
             System.out.println(" Le nombre saisie n'est pas dans la tableau !");
-        }else{
+        } else {
 
-            System.out.println("Le nombre se trouve dans le tableau à la position :" + (position+1));
+            System.out.println("Le nombre se trouve dans le tableau à la position :" + (position + 1));
         }
 
         sc.close();
     }
 
 }
- 
-

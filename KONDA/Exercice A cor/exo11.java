@@ -14,45 +14,43 @@
  * 
 */
 
-
 import java.util.Scanner; /* Importation de la bibliothèque Java Scanner */
 
-    /***--------Donner un nom à votre class -------------------****/
+/*** --------Donner un nom à votre class ------------------- ****/
 
 public class exo11 { /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
 
-
     public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
 
-          int solde = 3000; /*  Déclaration d'une variable de Type Entier */
+        int solde = 3000; /* Déclaration d'une variable de Type Entier */
 
-          int retrait; /*  Déclaration d'une variable de Type Entier */
+        int retrait; /* Déclaration d'une variable de Type Entier */
 
-          Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner */ 
+        Scanner clavier = new Scanner(System.in); /* Déclaration du scanner Instance de l'Objet Scanner */
 
-          System.out.println("Bonjour, combien voulez-vous retirer ?"); /* Afficher votre instruction */
-          
-          retrait = clavier.nextInt(); 
+        System.out.println("Bonjour, combien voulez-vous retirer ?"); /* Afficher votre instruction */
 
-          if(retrait > solde){
+        retrait = clavier.nextInt();
 
-           
-          System.out.println("Opération refusée, fond insuffissant !"); /* Afficher votre instruction */
-           
+        if (retrait > solde) {
 
-          }else{
+            System.out.println("Opération refusée, fond insuffissant !"); /* Afficher votre instruction */
+
+        } else {
 
             solde -= retrait;
 
-            System.out.println("Opération accepté votre solde restant est de "+solde+" euros"); /* Afficher votre instruction */
-           
-          }
+            System.out.println("Opération accepté votre solde restant est de " + solde + " euros"); /*
+                                                                                                     * Afficher votre
+                                                                                                     * instruction
+                                                                                                     */
 
-          clavier.close();
+        }
 
-        /***--------  Fin du code  -------------------****/
+        clavier.close();
+
+        /*** -------- Fin du code ------------------- ****/
 
     }
 
 }
-

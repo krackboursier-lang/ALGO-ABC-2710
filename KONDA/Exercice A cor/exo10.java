@@ -31,79 +31,77 @@
  * 
 */
 
-
 import java.util.Scanner; /* Importation de la bibliothèque Java Scanner */
-
 
 public class exo10 { /* Nom de la classe */
 
     public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
 
-        /***--------  Début du code  -------------------****/
+        /*** -------- Début du code ------------------- ****/
 
-
-        boolean response1,response2,response3; //  Déclaration d'une variable a de Type Entier */
+        boolean response1, response2, response3; // Déclaration d'une variable a de Type Entier */
         int score = 0;
-          
-          Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner 
 
-          System.out.println("Question 1 : Le Portugal a t-elle déjà été envahi par l'Espagne ? (Y/N)"); /* Afficher votre instruction */
-             
-          response1 = clavier.nextBoolean();
+        Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner
 
-          if(!response1){
+        System.out.println("Question 1 : Le Portugal a t-elle déjà été envahi par l'Espagne ? (Y/N)"); /*
+                                                                                                        * Afficher votre
+                                                                                                        * instruction
+                                                                                                        */
+
+        response1 = clavier.nextBoolean();
+
+        if (!response1) {
 
             score++; // Incrémentation c'est la même chose que score = score + 1
             System.out.println(" Bonne réponse : +1 point :) "); /* Afficher votre instruction */
 
-             }else{
+        } else {
 
-                System.out.println(" Mauvaise réponse :  0 point :( "); /* Afficher votre instruction */
-             
-            }
+            System.out.println(" Mauvaise réponse :  0 point :( "); /* Afficher votre instruction */
 
-            System.out.println("Question 2 : Est ce que Louis XVI est le dernier roi de France ? (Y/N)"); /* Afficher votre instruction */
-            response2 = clavier.nextBoolean();
+        }
 
-            if(!response2){
-                score++; // Incrémentation c'est la même chose que score = score + 1
-                System.out.println(" Bonne réponse : +1 point :) "); /* Afficher votre instruction */
-    
-                 }else{
-    
-                    System.out.println(" Mauvaise réponse :  0 point :( "); /* Afficher votre instruction */
-                 
-                }
+        System.out.println("Question 2 : Est ce que Louis XVI est le dernier roi de France ? (Y/N)"); /*
+                                                                                                       * Afficher votre
+                                                                                                       * instruction
+                                                                                                       */
+        response2 = clavier.nextBoolean();
 
+        if (!response2) {
+            score++; // Incrémentation c'est la même chose que score = score + 1
+            System.out.println(" Bonne réponse : +1 point :) "); /* Afficher votre instruction */
 
-                System.out.println("Question 3 : la 5e république de France a été fondé en 1958 ? (Y/N)"); /* Afficher votre instruction */
-                response3 = clavier.nextBoolean();
-                
-                if(response3){
-                    score++; // Incrémentation c'est la même chose que score = score + 1
-                    System.out.println(" Bonne réponse : +1 point :) "); /* Afficher votre instruction */
-        
-                     }else{
-        
-                        System.out.println(" Mauvaise réponse :  0 point :( "); /* Afficher votre instruction */
-                     
-                    }
+        } else {
 
-                /**** Ca se Répète */
+            System.out.println(" Mauvaise réponse :  0 point :( "); /* Afficher votre instruction */
 
+        }
 
+        System.out.println("Question 3 : la 5e république de France a été fondé en 1958 ? (Y/N)"); /*
+                                                                                                    * Afficher votre
+                                                                                                    * instruction
+                                                                                                    */
+        response3 = clavier.nextBoolean();
 
-          System.out.println("Score total :"+score+"/3"); /* Afficher votre instruction */
-             
+        if (response3) {
+            score++; // Incrémentation c'est la même chose que score = score + 1
+            System.out.println(" Bonne réponse : +1 point :) "); /* Afficher votre instruction */
 
+        } else {
 
+            System.out.println(" Mauvaise réponse :  0 point :( "); /* Afficher votre instruction */
+
+        }
+
+        /**** Ca se Répète */
+
+        System.out.println("Score total :" + score + "/3"); /* Afficher votre instruction */
 
         clavier.close();
 
-      /***--------  Fin du code  -------------------****/
+        /*** -------- Fin du code ------------------- ****/
 
-  }
+    }
 
 }
-
-

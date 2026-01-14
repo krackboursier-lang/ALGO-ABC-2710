@@ -1,5 +1,5 @@
 
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class Exo1_1_2 {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Exo1_1_2 {
 
         do {
             System.out.print("Veuillez saisir 2 nombres séparés par un espace : ");
-            
+
             // Lecture des deux entiers
             int nb1 = lecteur.nextInt();
             int nb2 = lecteur.nextInt();
@@ -30,8 +30,7 @@ public class Exo1_1_2 {
         System.out.println("Appuyez sur Entrée pour quitter.");
         lecteur.nextLine(); // Consomme le reste de la ligne
         lecteur.nextLine(); // Attend l'appui sur une touche
-        
+
         lecteur.close();
     }
-}   
-
+}

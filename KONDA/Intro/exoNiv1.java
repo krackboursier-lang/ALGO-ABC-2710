@@ -1,7 +1,7 @@
-  
 
-/* Niveau 1 : A l'aide d'une boucle, PRINT & SCANNER 
-*Créer un système de commande de restauration
+/*
+ * Niveau 1 : A l'aide d'une boucle, PRINT & SCANNER
+ * Créer un système de commande de restauration
  * 
  * 
  * **********************AFFICHAGE ATTENDU ****************:
@@ -11,7 +11,7 @@
  * true
  * 
  * (CETTE QUESTION NE S'AFFICHE PAS SI VOUS AVEZ CHOISI FALSE A LA PREMIERE)
- * Votre steak vous le voulez saignant (true) ou à poing (false) ? 
+ * Votre steak vous le voulez saignant (true) ou à poing (false) ?
  * false
  * 
  * 
@@ -28,4 +28,3 @@
  * 
  * 
  */
-

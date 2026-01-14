@@ -1,7 +1,9 @@
 
-/* Niveau 2 : A l'aide d'une boucle, PRINT & SCANNER 
-*Me faire un système de listing pour de vos courses alimentaires
-Les afficher à la fin avec le coût total de vos courses et demander si vous voulez supprimer un article de votre course
+/*
+ * Niveau 2 : A l'aide d'une boucle, PRINT & SCANNER
+ * Me faire un système de listing pour de vos courses alimentaires
+ * Les afficher à la fin avec le coût total de vos courses et demander si vous
+ * voulez supprimer un article de votre course
  * 
  * 
  * **********************AFFICHAGE ATTENDU ****************:
@@ -30,7 +32,7 @@ Les afficher à la fin avec le coût total de vos courses et demander si vous vo
  * Combien, ça côute ?:
  * 1.30
  * 
-    * Voulez-vous acheter autre choses (true/false)?
+ * Voulez-vous acheter autre choses (true/false)?
  * false
  * 
  * 
@@ -45,4 +47,3 @@ Les afficher à la fin avec le coût total de vos courses et demander si vous vo
  * 
  * 
  */
-

@@ -1,5 +1,5 @@
- 
- import java.util.Scanner;   
+
+import java.util.Scanner;
 
 public class exoNivcor3_ {
     public static void main(String[] args) {
@@ -56,8 +56,4 @@ public class exoNivcor3_ {
         scanner.close();
     }
 
-
 }
-      
-
-

@@ -79,4 +79,3 @@ public class SearchNumber {
         sc.close();
     }
 }
- 

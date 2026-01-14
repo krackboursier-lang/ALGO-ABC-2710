@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exo1_2{
+public class Exo1_2 {
     public static void main(String[] args) {
         // Créer un objet Scanner pour lire l'entrée utilisateur
         Scanner scanner = new Scanner(System.in);

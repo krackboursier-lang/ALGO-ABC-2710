@@ -1,4 +1,5 @@
-package ALGO_ABC_2710.CHATELOT.Exercice_A;
+import java.util.*;
+
 public class Exo3_3 {
 
     // Méthode pour rechercher un nombre dans un tableau trié
@@ -22,13 +23,13 @@ public class Exo3_3 {
 
     // Méthode principale pour tester
     public static void main(String[] args) {
-        int[] tableau = {5, 12, 18, 25, 30, 42, 55, 60, 78, 81};
-        int[] tests = {42, 99, 5, 18, 100};
+        int[] tableau = { 5, 12, 18, 25, 30, 42, 55, 60, 78, 81 };
+        int[] tests = { 42, 99, 5, 18, 100 };
 
         for (int n : tests) {
             int indice = rechercher(tableau, n);
             System.out.println("Recherche " + n + ": " +
-                (indice != -1 ? "indice " + indice : "404 Not found"));
+                    (indice != -1 ? "indice " + indice : "404 Not found"));
         }
     }
 }
