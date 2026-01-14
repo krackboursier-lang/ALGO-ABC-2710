@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package ALGO_ABC_2710.CHATELOT.Exercice_A;
 public class Exo3_3 {
 
     // Méthode pour rechercher un nombre dans un tableau trié
