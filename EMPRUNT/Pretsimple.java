@@ -1,23 +1,21 @@
 import java.util.*;
-import java.lang.*;
 
-public class Pret {
+public class Pretsimple {
 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         double capital;
         int nbmois;
 
-        System.out.println(" Veuiller saisir le capital à emprunter :");
+        System.out.println("Veuiller saisir le capital à emprunter :");
         capital = sc.nextDouble();
         System.out.println("Veuiller saisir le taux d'intérêt annuel ");
         double tauxmensuel = (sc.nextDouble()) / 1200;
         System.out.println("Veuiller saisir la durée dde remboursement (en années)");
         nbmois = (sc.nextInt()) * 12;
-        double rembmensuel = Pret.calculMensualite(capital, nbmois, tauxmensuel);
+        double rembmensuel = Pretsimple.calculMensualite(capital, nbmois, tauxmensuel);
 
         System.out.printf("Votre mensualité de rembourserment sera de %.2f Euros ", rembmensuel);
-
     }
 
     private static double calculMensualite(double _capital, int _nbmois, double _tauxmensuel) {
@@ -29,9 +27,7 @@ public class Pret {
         double mensualite = (_capital * _tauxmensuel) / Q;
 
         return mensualite;
-
     }
-
     // public static double calculMensualite( double _cap, double _tauxannuel )
     // {
     // double mensualite=0;
