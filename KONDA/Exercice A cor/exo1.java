@@ -1,35 +1,33 @@
-import java.util.Scanner; /* Importation de la bibliothèque Java Scanner */
+import java.util.Scanner; // Importation correcte de la bibliothèque Scanner
 
-/*** --------Donner un nom à votre class ------------------- ****/
+// Nom de la classe : doit correspondre au nom du fichier (ex: Exo1.java)
+public class exo1 {
 
-public class exo1 { /* ATTENTION LA CLASSE DOIT AVOIR LE MÊME NOM QUE LE FICHIER ! */
+    public static void main(String[] args) {
 
-    public static void main(String[] args) { /* Toujours le mettre pour tester votre code */
-
-        /*** -------- Début du code ------------------- ****/
-
-        /* Déclaration des variables */
+        // Déclaration des variables
         int a;
         int b;
         int addition;
 
-        Scanner clavier = new Scanner(System.in); // Déclaration du scanner Instance de l'Objet Scanner
+        // Création d'une instance de Scanner pour lire les entrées utilisateur
+        Scanner clavier = new Scanner(System.in);
 
-        System.out.println("La valeur de a"); // Affiche un message
-        a = clavier.nextInt(); // On affecte une valeur Scanner de type entier à A
-        System.out.println("La valeur de b");// Affiche un message
-        b = clavier.nextInt();// On affecte une valeur Scanner de type entier à B
+        // Demande à l'utilisateur de saisir la valeur de 'a'
+        System.out.print("Entrez la valeur de a : ");
+        a = clavier.nextInt();
 
-        addition = a + b; // calcul la somme
+        // Demande à l'utilisateur de saisir la valeur de 'b'
+        System.out.print("Entrez la valeur de b : ");
+        b = clavier.nextInt();
 
-        System.out.println("a+b= " + addition); /*
-                                                 * Afficher votre instruction , concaténation pour la phrase dynamique
-                                                 */
+        // Calcul de la somme
+        addition = a + b;
 
+        // Affichage du résultat
+        System.out.println("a + b = " + addition);
+
+        // Fermeture du Scanner pour libérer les ressources
         clavier.close();
-
-        /*** -------- Fin du code ------------------- ****/
-
     }
-
 }
