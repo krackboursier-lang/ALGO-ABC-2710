@@ -2,7 +2,7 @@ package OBJET;
 
 import java.time.LocalDateTime;
 
-public class CCPcor {
+public class Banque {
     // attributs
     private double decouvertAutorise;
     protected String nomPropietaire;
@@ -13,7 +13,7 @@ public class CCPcor {
     // nettoyage d'un objet avant que le système de Garbage Collector ne s'en charge
 
     public void finalize() throws Throwable {
-        ;
+        super.finalize();
 
     }
 
@@ -55,7 +55,7 @@ public class CCPcor {
 
     // constructeur avec paramètres
 
-    public CCPcor(String _nomProprio, double _solde, double _decouvertAutorise) {
+    public Banque(String _nomProprio, double _solde, double _decouvertAutorise) {
         LocalDateTime locTimes = LocalDateTime.now();
         this.numero = locTimes.hashCode();
         this.nomPropietaire = _nomProprio;
@@ -65,7 +65,7 @@ public class CCPcor {
     }
     // constructeur à vide
 
-    public CCPcor() {
+    public Banque() {
         LocalDateTime locTimes = LocalDateTime.now();
         this.numero = locTimes.hashCode();
         this.nomPropietaire = "sans nom";
@@ -108,7 +108,7 @@ public class CCPcor {
      * @return renvoie un booleen true si le virement est effectué sinon false
      */
 
-    public boolean transferer(double _montant, CCPcor _autreCompte) {
+    public boolean transferer(double _montant, Banque _autreCompte) {
         if (this.debiter(_montant)) {
             _autreCompte.crediter(_montant);
             return true;
@@ -124,7 +124,7 @@ public class CCPcor {
      * @return renvoie un booleen true si le solde du compte courant est supérieur
      *         ou egal à celui du compte passé en paramètre sinon false
      */
-    public boolean superieur(CCPcor _autreCompte) {
+    public boolean superieur(Banque _autreCompte) {
         return this.solde >= _autreCompte.solde;
     }
 
