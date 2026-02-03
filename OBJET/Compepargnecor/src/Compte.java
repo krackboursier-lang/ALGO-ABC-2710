@@ -1,8 +1,7 @@
-package OBJET;
 
 import java.time.LocalDateTime;
 
-public class Banque {
+public class Compte {
     // attributs
     private double decouvertAutorise;
     protected String nomPropietaire;
@@ -55,7 +54,7 @@ public class Banque {
 
     // constructeur avec paramètres
 
-    public Banque(String _nomProprio, double _solde, double _decouvertAutorise) {
+    public Compte(String _nomProprio, double _solde, double _decouvertAutorise) {
         LocalDateTime locTimes = LocalDateTime.now();
         this.numero = locTimes.hashCode();
         this.nomPropietaire = _nomProprio;
@@ -65,7 +64,7 @@ public class Banque {
     }
     // constructeur à vide
 
-    public Banque() {
+    public Compte() {
         LocalDateTime locTimes = LocalDateTime.now();
         this.numero = locTimes.hashCode();
         this.nomPropietaire = "sans nom";
@@ -108,7 +107,7 @@ public class Banque {
      * @return renvoie un booleen true si le virement est effectué sinon false
      */
 
-    public boolean transferer(double _montant, Banque _autreCompte) {
+    public boolean transferer(double _montant, Compte _autreCompte) {
         if (this.debiter(_montant)) {
             _autreCompte.crediter(_montant);
             return true;
@@ -124,7 +123,7 @@ public class Banque {
      * @return renvoie un booleen true si le solde du compte courant est supérieur
      *         ou egal à celui du compte passé en paramètre sinon false
      */
-    public boolean superieur(Banque _autreCompte) {
+    public boolean superieur(Compte _autreCompte) {
         return this.solde >= _autreCompte.solde;
     }
 
@@ -136,8 +135,9 @@ public class Banque {
     public String toString() {
         return "Compte n°" + this.numero +
                 " Propriétaire: " + this.nomPropietaire +
-                " Solde: " + this.solde + " €" +
-                " Découvert autorisé: " + this.decouvertAutorise + " €";
+                " Solde: " + this.solde + " Euros" +
+                " Découvert autorisé: " + this.decouvertAutorise + " Euros";
+
     }
 
 }
