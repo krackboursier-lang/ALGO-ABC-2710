@@ -1,3 +1,5 @@
+package OBJET.Compepargnecor.src;
+
 class Banque {
     private Compte[] lesComptes;
     private int nbComptes;
@@ -8,12 +10,12 @@ class Banque {
     }
 
     public void init() {
-        Compte c1 = new Compte("total", 1000, -500);
-        Compte c2 = new Compte("tit", 2000, -1000);
-        Compte c3 = new Compte("dupend", 1500, -1500);
-        Compte c4 = new Compte("durand", 1200, -500);
-        Compte c5 = new Compte("dubois", -200, -500);
-        Compte c6 = new Compte("duval", 750, -2000);
+        Compte c1 = new Compte("MATT", 1000, -500);
+        Compte c2 = new Compte("STEVE", 2000, -1000);
+        Compte c3 = new Compte("SALAH", 1500, -1500);
+        Compte c4 = new Compte("JIMMY", 1200, -500);
+        Compte c5 = new Compte("BRAD", -200, -500);
+        Compte c6 = new Compte("STALONE", 750, -2000);
         this.ajouteCompte(c1);
         this.ajouteCompte(c2);
         this.ajouteCompte(c3);
@@ -51,11 +53,11 @@ class Banque {
 
     public boolean transferer(int i, int j, int k) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'transferer'");
+        throw new UnsupportedOperationException("TRANSFERER");
     }
 
     public Compte ajouteCompte(int i) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ajouteCompte'");
+        throw new UnsupportedOperationException("AJOUTER COMPTE PAR NUMERO");
     }
 }

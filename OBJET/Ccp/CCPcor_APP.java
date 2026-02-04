@@ -1,4 +1,4 @@
-package OBJET;
+package OBJET.Ccp;
 
 public class CCPcor_APP {
     // Attributs

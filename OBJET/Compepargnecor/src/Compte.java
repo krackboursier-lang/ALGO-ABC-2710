@@ -1,4 +1,4 @@
-
+package OBJET.Compepargnecor.src;
 import java.time.LocalDateTime;
 
 public class Compte {
@@ -67,7 +67,7 @@ public class Compte {
     public Compte() {
         LocalDateTime locTimes = LocalDateTime.now();
         this.numero = locTimes.hashCode();
-        this.nomPropietaire = "sans nom";
+        this.nomPropietaire = "SANS NOM";
         this.solde = 0;
         this.decouvertAutorise = 0;
 

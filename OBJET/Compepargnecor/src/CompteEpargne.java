@@ -1,4 +1,4 @@
-;
+package OBJET.Compepargnecor.src;
 public class CompteEpargne extends Compte {
 
     // attributs
@@ -64,4 +64,3 @@ public class CompteEpargne extends Compte {
     }
 
 }
- 

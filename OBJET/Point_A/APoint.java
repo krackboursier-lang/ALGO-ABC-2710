@@ -1,4 +1,4 @@
-package OBJET;
+package OBJET.Point_A;
 
 public class APoint {
 

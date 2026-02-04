@@ -1,3 +1,5 @@
+package OBJET.Compepargnecor.src;
+
 public class App {
     public static void main(String[] args) {
         Banque b = new Banque();
@@ -5,7 +7,7 @@ public class App {
         System.out.println("Comptes initiaux :");
         b.afficherComptes();
 
-        b.ajouteCompte(1245, "dutronc", 4500, -500);
+        b.ajouteCompte(1245, "DUTRONC", 4500, -500);
         System.out.println("\nComptes après ajout :");
         b.afficherComptes();
 

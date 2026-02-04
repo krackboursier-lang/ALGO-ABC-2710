@@ -1,4 +1,4 @@
-package OBJET;
+package OBJET.Livret_A;
 
 class Compte {
     private String nomProprio;

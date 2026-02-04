@@ -1,4 +1,4 @@
-package OBJET;
+package OBJET.Point_A;
 
 import java.util.Scanner;
 
