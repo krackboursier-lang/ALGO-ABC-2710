@@ -1,38 +1,40 @@
-package OBJET.Compepargnecor.src;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Banque b = new Banque();
-        b.init();
-        System.out.println("Comptes initiaux :");
-        b.afficherComptes();
+        Banque mesComptes = new Banque(" CREDIT MARSEILLAIS");
+        mesComptes.init();
 
-        b.ajouteCompte(1245, "DUTRONC", 4500, -500);
-        System.out.println("\nComptes après ajout :");
-        b.afficherComptes();
+        Scanner clavier = new Scanner(System.in);
 
-        Compte c = b.compteSup();
-        System.out.println("\nCompte au solde maximum :");
-        System.out.println(c);
+        Compte monCompte = new Compte(" DOLPH LUNGREN ", 5000, -200);
+        Compte monCompte1 = new Compte(" VAN DAMME", 50000, -500);
+        mesComptes.ajouterCompte(monCompte);
+        mesComptes.ajouterCompte(monCompte1);
 
-        Compte cTrouve = b.ajouteCompte(1245);
-        if (cTrouve != null) {
-            System.out.println("\nCompte trouvé :");
-            System.out.println(cTrouve);
-        }
+        mesComptes.ajouterNouveauCompte(" CLOONEY", 26000, -300);
+        System.out.println("COMPTES DANS LA BANQUE :");
+        mesComptes.afficherComptes();
 
-        System.out.println("\nTest de transfert 1 :");
-        if (b.transferer(1245, 2568, 1000)) {
-            System.out.println("Transfert effectué");
-        } else {
-            System.out.println("Transfert impossible");
-        }
+        Compte soldeEleve = mesComptes.rechercherCompteSup();
+        System.out.println("COMPTE AVEC LE SOLDE LE PLUS ÉLEVÉ:");
+        System.out.println(soldeEleve);
 
-        System.out.println("\nTest de transfert 2 :");
-        if (b.transferer(11633, 32345, 2000)) {
-            System.out.println("Transfert effectué");
-        } else {
-            System.out.println("Transfert impossible");
-        }
+        System.out.println("ENTREZ LE NUMÉRO DE COMPTE À RECHERCHER:");
+        int numRech = clavier.nextInt();
+        System.out.println(mesComptes.rendCompte(numRech));
+
+        System.out.println("INDIQUER LE COMPTE SOURCE À DÉBITER POUR TRANSFERT:");
+        int source = clavier.nextInt();
+        System.out.println("INDIQUER LE COMPTE DESTINATAIRE POUR TRANSFERT:");
+        int destination = clavier.nextInt();
+        System.out.println("INDIQUER LE MONTANT DU TRANSFERT EN EUROS:");
+        double montantTransf = clavier.nextDouble();
+        mesComptes.transferer(source, destination, montantTransf);
+
+        System.out.println("ÉTAT DES COMPTES APRES TRANSFERT:");
+        System.out.println(mesComptes.rendCompte(source) + "\n" + mesComptes.rendCompte(destination));
+
+        clavier.close();
     }
 }
