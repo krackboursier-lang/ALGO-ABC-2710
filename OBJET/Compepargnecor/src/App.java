@@ -13,14 +13,17 @@ public class App {
         mesComptes.ajouterCompte(monCompte1);
 
         mesComptes.ajouterNouveauCompte("PABLO", 2600, -300);
-        System.out.println("----------------------------------------------COMPTES DANS LA BANQUE-----------------------------------------------------:");
+        System.out.println(
+                "----------------------------------------------COMPTES DANS LA BANQUE--------------------------------------------------------------:");
         mesComptes.afficherComptes();
 
         Compte soldeEleve = mesComptes.rechercherCompteSup();
-        System.out.println("--------------------------------------COMPTE AVEC LE SOLDE LE PLUS ÉLEVÉ----------------------------------------------------------:");
+        System.out.println(
+                "--------------------------------------COMPTE AVEC LE SOLDE LE PLUS ÉLEVÉ----------------------------------------------------------:");
         System.out.println(soldeEleve);
 
-        System.out.println("-----------------------------------ENTREZ LE NUMÉRO DE COMPTE À RECHERCHER:-------------------------------------------------------:");
+        System.out.println(
+                "-----------------------------------ENTREZ LE NUMÉRO DE COMPTE À RECHERCHER:-------------------------------------------------------:");
         int numRech = clavier.nextInt();
         Compte compteTrouve = mesComptes.rendCompte(numRech);
         if (compteTrouve != null) {
@@ -45,6 +48,5 @@ public class App {
         System.out.println("ÉTAT DES COMPTES APRES TRANSFERT:");
         System.out.println(mesComptes.rendCompte(source) + "\n" + mesComptes.rendCompte(destination));
 
-        
     }
 }
