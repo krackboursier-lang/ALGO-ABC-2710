@@ -6,11 +6,6 @@ public class CompteEpargne extends Compte {
         this.tauxInteret = taux;
     }
 
-    public CompteEpargne(int numero, String nom, double solde, double decouvertAutorise, double taux) {
-        super(nom, solde, decouvertAutorise);
-        this.tauxInteret = taux;
-    }
-
     public double getTauxInteret() {
         return tauxInteret;
     }
@@ -21,6 +16,6 @@ public class CompteEpargne extends Compte {
 
     @Override
     public String toString() {
-        return super.toString() + ", Taux d'intérêt: " + (this.tauxInteret * 100) + "%";
+        return super.toString() + String.format(", Taux d'intérêt: %.2f%%", this.tauxInteret * 100);
     }
 }
