@@ -14,7 +14,7 @@ public class App {
 
         mesComptes.ajouterNouveauCompte("PABLO", 2600, -300);
         System.out.println(
-                "----------------------------------------------COMPTES DANS LA BANQUE--------------------------------------------------------------:");
+                "---------------------------------------------COMPTES DANS LA BANQUE---------------------------------------------------------------:");
         mesComptes.afficherComptes();
 
         Compte soldeEleve = mesComptes.rechercherCompteSup();
