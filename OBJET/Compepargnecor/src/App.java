@@ -32,11 +32,14 @@ public class App {
             System.out.println("COMPTE INTROUVABLE.");
         }
 
-        System.out.println("INDIQUER LE COMPTE SOURCE À DÉBITER POUR TRANSFERT:");
+        System.out.println(
+                "---------------------------INDIQUER LE COMPTE SOURCE À DÉBITER POUR TRANSFERT:----------------------------------------------------:");
         int source = clavier.nextInt();
-        System.out.println("INDIQUER LE COMPTE DESTINATAIRE POUR TRANSFERT:");
+        System.out.println(
+                "---------------------------INDIQUER LE COMPTE DESTINATAIRE POUR TRANSFERT---------------------------------------------------------:");
         int destination = clavier.nextInt();
-        System.out.println("INDIQUER LE MONTANT DU TRANSFERT EN EUROS:");
+        System.out.println(
+                "-------------------------------------INDIQUER LE MONTANT DU TRANSFERT EN EUROS----------------------------------------------------:");
         double montantTransf = clavier.nextDouble();
         boolean transfertReussi = mesComptes.transferer(source, destination, montantTransf);
         if (transfertReussi) {
@@ -45,7 +48,7 @@ public class App {
             System.out.println("TRANSFERT ÉCHOUE.");
         }
 
-        System.out.println("ÉTAT DES COMPTES APRES TRANSFERT:");
+        System.out.println("------------------------------------ÉTAT DES COMPTES APRES TRANSFERT--------------------------------------------------------------:");
         System.out.println(mesComptes.rendCompte(source) + "\n" + mesComptes.rendCompte(destination));
 
     }
