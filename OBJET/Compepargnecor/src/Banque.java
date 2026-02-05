@@ -20,12 +20,12 @@ public class Banque {
     }
 
     public void init() {
-        Compte c1 = new Compte("SALAH", 1000.0, -500);
-        Compte c2 = new Compte("JIMMY", 2000.0, -1000);
-        Compte c3 = new Compte("BRAD", 1500.0, -1500);
-        CompteEpargne c4 = new CompteEpargne("STEVE", 1200.0, 0, 0.015);
-        CompteEpargne c5 = new CompteEpargne("STALLONE", 5000, 0, 0.015);
-        CompteEpargne c6 = new CompteEpargne("KENNY", 2750, 0, 0.015);
+        Compte c1 = new Compte("SALAH", 1000.0, -125);
+        Compte c2 = new Compte("JIMMY", 2000.0, -100);
+        Compte c3 = new Compte("BRADD", 1500.0, -150);
+        CompteEpargne c4 = new CompteEpargne("STEVE", 1200, -200, 0.015);
+        CompteEpargne c5 = new CompteEpargne("STALO", 5000, -300, 0.015);
+        CompteEpargne c6 = new CompteEpargne("KENNY", 2750, -400, 0.015);
 
         this.ajouterCompte(c1);
         this.ajouterCompte(c2);

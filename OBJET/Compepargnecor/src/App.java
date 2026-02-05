@@ -7,20 +7,20 @@ public class App {
 
         Scanner clavier = new Scanner(System.in);
 
-        Compte monCompte = new Compte("DOLPH LUNDGREN", 5000, -200);
-        Compte monCompte1 = new Compte("VAN DAMME", 50000, -500);
+        Compte monCompte = new Compte("DOLPH", 5000, -200);
+        Compte monCompte1 = new Compte("WANDA", 5000, -500);
         mesComptes.ajouterCompte(monCompte);
         mesComptes.ajouterCompte(monCompte1);
 
-        mesComptes.ajouterNouveauCompte("CLOONEY", 26000, -300);
-        System.out.println("COMPTES DANS LA BANQUE :");
+        mesComptes.ajouterNouveauCompte("PABLO", 2600, -300);
+        System.out.println("----------------------------------------------COMPTES DANS LA BANQUE-----------------------------------------------------:");
         mesComptes.afficherComptes();
 
         Compte soldeEleve = mesComptes.rechercherCompteSup();
-        System.out.println("COMPTE AVEC LE SOLDE LE PLUS ÉLEVÉ:");
+        System.out.println("--------------------------------------COMPTE AVEC LE SOLDE LE PLUS ÉLEVÉ----------------------------------------------------------:");
         System.out.println(soldeEleve);
 
-        System.out.println("ENTREZ LE NUMÉRO DE COMPTE À RECHERCHER:");
+        System.out.println("-----------------------------------ENTREZ LE NUMÉRO DE COMPTE À RECHERCHER:-------------------------------------------------------:");
         int numRech = clavier.nextInt();
         Compte compteTrouve = mesComptes.rendCompte(numRech);
         if (compteTrouve != null) {

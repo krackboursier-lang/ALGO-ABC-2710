@@ -101,8 +101,9 @@ public class Compte {
         }
         return false;
     }
- public String toString() {
-    
+
+    public String toString() {
+
         return "Compte n° \u001B[36m" + this.numero +
                 "\u001B[0m \u001B[33m||\u001B[0m  Propriétaire: \u001B[34m" + this.nomPropietaire +
                 "\u001B[0m \u001B[33m||\u001B[0m Solde: \u001B[32m" + this.solde + "\u001B[0m Euros" +
