@@ -64,7 +64,7 @@ public class AppFraction {
         Ecran.affiche(quotient); // Affiche 3/2
 
         Fraction puissance = f11.puissance(2);
-        System.out.print("----------PUISSANCE DE F11 au CARRE : ");
+        System.out.print("----------PUISSANCE DE F11 AU CARRE : ");
         Ecran.affiche(puissance); // Affiche 1/4
     }
 }
