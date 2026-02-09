@@ -1,9 +1,9 @@
-
+package System;
 
 /**
  * @author STebib
  * @version 1.0
- * @created 06-fï¿½vr.-2026 09:31:28
+ * @created 09-févr.-2026 08:28:48
  */
 public class Ecran {
 

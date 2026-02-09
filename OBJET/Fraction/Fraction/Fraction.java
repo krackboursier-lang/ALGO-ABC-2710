@@ -2,14 +2,14 @@ package System;
 
 /**
  * @version 1.0
- * @created 06-févr.-2026 09:31:26
+ * @created 09-fï¿½vr.-2026 08:28:35
  */
 public class Fraction {
 
 	private int numerateur;
 	private int denominateur;
 
-	public Fraction(){
+	public Fraction() {
 
 	}
 
@@ -17,7 +17,7 @@ public class Fraction {
 
 	}
 
-	private int getPgcd(){
+	private int getPgcd() {
 		return 0;
 	}
 
@@ -29,7 +29,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public boolean superieur(Fraction unefraction){
+	public boolean superieur(Fraction unefraction) {
 		return false;
 	}
 
@@ -37,7 +37,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public boolean inferieur(Fraction unefraction){
+	public boolean inferieur(Fraction unefraction) {
 		return false;
 	}
 
@@ -45,7 +45,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public boolean egal(Fraction unefraction){
+	public boolean egal(Fraction unefraction) {
 		return false;
 	}
 
@@ -53,7 +53,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public Fraction somme(Fraction unefraction){
+	public Fraction somme(Fraction unefraction) {
 		return null;
 	}
 
@@ -61,7 +61,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public Fraction difference(Fraction unefraction){
+	public Fraction difference(Fraction unefraction) {
 		return null;
 	}
 
@@ -69,7 +69,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public Fraction produit(Fraction unefraction){
+	public Fraction produit(Fraction unefraction) {
 		return null;
 	}
 
@@ -77,7 +77,7 @@ public class Fraction {
 	 * 
 	 * @param unefraction
 	 */
-	public Fraction quotient(Fraction unefraction){
+	public Fraction quotient(Fraction unefraction) {
 		return null;
 	}
 
@@ -85,7 +85,7 @@ public class Fraction {
 	 * 
 	 * @param exposant
 	 */
-	public Fraction puissance(int exposant){
+	public Fraction puissance(int exposant) {
 		return null;
 	}
 
