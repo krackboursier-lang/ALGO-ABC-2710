@@ -1,55 +1,63 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
-    public static void main(String[] args) {
-        Banque mesComptes = new Banque("CREDIT MARSEILLAIS");
-        mesComptes.init();
+    public static void main(String[] args) throws Exception {
 
-        Scanner clavier = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        Compte monCompte = new Compte("DOLPH", 5000, -200);
-        Compte monCompte1 = new Compte("WANDA", 5000, -500);
-        mesComptes.ajouterCompte(monCompte);
-        mesComptes.ajouterCompte(monCompte1);
+        int numCompte;
 
-        mesComptes.ajouterNouveauCompte("PABLO", 2600, -300);
+        BanqueList maBanque = new BanqueList(" LCL");
+        maBanque.init();
+        maBanque.afficherComptes();
         System.out.println(
-                "---------------------------------------------COMPTES DANS LA BANQUE---------------------------------------------------------------:");
-        mesComptes.afficherComptes();
+                "------------------------------------------------------- AFFICHER UN COMPTE-------------------------------------------------");
 
-        Compte soldeEleve = mesComptes.rechercherCompteSup();
-        System.out.println(
-                "--------------------------------------COMPTE AVEC LE SOLDE LE PLUS ÉLEVÉ----------------------------------------------------------:");
-        System.out.println(soldeEleve);
+        maBanque.ajouterNouveauCompte("GLYNN", 4000, -2000);
+
+        maBanque.afficherComptes();
 
         System.out.println(
-                "-----------------------------------ENTREZ LE NUMÉRO DE COMPTE À RECHERCHER:-------------------------------------------------------:");
-        int numRech = clavier.nextInt();
-        Compte compteTrouve = mesComptes.rendCompte(numRech);
-        if (compteTrouve != null) {
-            System.out.println(compteTrouve);
+                "------------------------------------------ AFFICHER LES COMPTES DE SOLDE MAXIMUM-------------------------------------------");
+
+        System.out.println(" COMPTE SOLDE MAX :" + maBanque.rechercheCompteMax());
+
+        System.out.println(
+                "-------------------------------------------RECHERCHE D UN COMTPE PAR NUMERO------------------------------------------------");
+        int[] montab = { 0 };
+
+        System.out.println(
+                " ---------------------------------------VEUILLEZ RECHERCHER UN NUMERO DE COMPTE--------------------------------------------");
+        numCompte = sc.nextInt();
+        if (maBanque.rechercherCompte(numCompte, montab) != null) {
+            System.out.println("LE COMPTE RECGERCHRE PAR NUMERO: " + maBanque.rechercherCompte(numCompte, montab)
+                    + " \n A LA POISTION: " + montab[0] + " DANS LA LISTE DES COMPTES");
+
         } else {
-            System.out.println("COMPTE INTROUVABLE.");
+
+            System.out.println(" LE COMPTE EST INEXISTANT !");
+        }
+
+        System.out.println("---------- TEST METHODE TRANSFERER-------------------");
+        System.out.println("VEUILLEZ RECHERER SAISIR UN NUMERO DE COMPTE À DÉBITER");
+        int numComptedebit = sc.nextInt();
+        System.out.println("VEUILLEZ RECHERE SAISIR UN NUMERO DE COMPTE À CRÉDITER");
+        int numComptecredit = sc.nextInt();
+
+        System.out.println("VEUILLEZ RECHERCHEZ SAISIR LE MONTANT DU VIREMENT :");
+        int montant = sc.nextInt();
+
+        if (maBanque.transferer(numComptedebit, numComptecredit, montant) == true) {
+            System.out.println("LE VIREMENT A ETE AUTORISÉ ");
+        } else {
+            System.out.println(" VIREMENT NON AUTORISÉ");
         }
 
         System.out.println(
-                "---------------------------INDIQUER LE COMPTE SOURCE À DÉBITER POUR TRANSFERT:----------------------------------------------------:");
-        int source = clavier.nextInt();
-        System.out.println(
-                "---------------------------INDIQUER LE COMPTE DESTINATAIRE POUR TRANSFERT---------------------------------------------------------:");
-        int destination = clavier.nextInt();
-        System.out.println(
-                "-------------------------------------INDIQUER LE MONTANT DU TRANSFERT EN EUROS----------------------------------------------------:");
-        double montantTransf = clavier.nextDouble();
-        boolean transfertReussi = mesComptes.transferer(source, destination, montantTransf);
-        if (transfertReussi) {
-            System.out.println("TRANSFERT RÉUSSI.");
-        } else {
-            System.out.println("TRANSFERT ÉCHOUE.");
-        }
+                "------------------------------------- AFFICHER LES COMPTES DE LA BANQUE ---------------------------------------------------");
+        maBanque.afficherComptes();
 
-        System.out.println("------------------------------------ÉTAT DES COMPTES APRES TRANSFERT--------------------------------------------------------------:");
-        System.out.println(mesComptes.rendCompte(source) + "\n" + mesComptes.rendCompte(destination));
+        sc.close();
 
     }
 }
