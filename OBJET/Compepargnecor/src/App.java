@@ -1,63 +1,79 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    // Constante pour la couleur bleue en gras (ANSI escape code)
+    public static final String BLUE_BOLD = "\033[1;34m";
+    public static final String RESET = "\033[0m";
 
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int numCompte;
-
-        BanqueList maBanque = new BanqueList(" LCL");
+        // Initialisation de la banque
+        BanqueList maBanque = new BanqueList("LCL");
         maBanque.init();
-        maBanque.afficherComptes();
-        System.out.println(
-                "------------------------------------------------------- AFFICHER UN COMPTE-------------------------------------------------");
 
+        // Affichage des comptes
+        System.out.println(BLUE_BOLD +
+            "============================================== AFFICHER LES COMPTES ====================================================" +
+            RESET);
+        maBanque.afficherComptes();
+
+        // Ajout d'un nouveau compte
         maBanque.ajouterNouveauCompte("GLYNN", 4000, -2000);
 
+        // Affichage des comptes après ajout
+        System.out.println(BLUE_BOLD +
+            "============================================== AFFICHER LES COMPTES (APRÈS AJOUT) ==========================================" +
+            RESET);
         maBanque.afficherComptes();
 
-        System.out.println(
-                "------------------------------------------ AFFICHER LES COMPTES DE SOLDE MAXIMUM-------------------------------------------");
+        // Recherche du compte avec le solde maximum
+        System.out.println(BLUE_BOLD +
+            "============================================== COMPTE AVEC LE SOLDE MAXIMUM ==============================================" +
+            RESET);
+        System.out.println("Compte avec le solde maximum : " + maBanque.rechercheCompteMax());
 
-        System.out.println(" COMPTE SOLDE MAX :" + maBanque.rechercheCompteMax());
+        // Recherche d'un compte par numéro
+        System.out.println(BLUE_BOLD +
+            "============================================== RECHERCHE D'UN COMPTE PAR NUMÉRO ==============================================" +
+            RESET);
+        System.out.print("Veuillez saisir un numéro de compte : ");
+        int numCompte = sc.nextInt();
+        int[] position = {0};
 
-        System.out.println(
-                "-------------------------------------------RECHERCHE D UN COMTPE PAR NUMERO------------------------------------------------");
-        int[] montab = { 0 };
-
-        System.out.println(
-                "---------------------------------------VEUILLEZ RECHERCHER UN NUMERO DE COMPTE--------------------------------------------");
-        numCompte = sc.nextInt();
-        if (maBanque.rechercherCompte(numCompte, montab) != null) {
-            System.out.println("LE COMPTE RECGERCHRE PAR NUMERO: " + maBanque.rechercherCompte(numCompte, montab)
-                    + " \n A LA POISTION: " + montab[0] + " DANS LA LISTE DES COMPTES");
-
+        if (maBanque.rechercherCompte(numCompte, position) != null) {
+            System.out.println("Le compte recherché : " + maBanque.rechercherCompte(numCompte, position) +
+                               "\nSe trouve à la position : " + position[0] + " dans la liste des comptes.");
         } else {
-
-            System.out.println(" LE COMPTE EST INEXISTANT !");
+            System.out.println("Le compte est introuvable !");
         }
 
-        System.out.println("---------- TEST METHODE TRANSFERER-------------------");
-        System.out.println("VEUILLEZ RECHERER SAISIR UN NUMERO DE COMPTE À DÉBITER");
-        int numComptedebit = sc.nextInt();
-        System.out.println("VEUILLEZ RECHERE SAISIR UN NUMERO DE COMPTE À CRÉDITER");
-        int numComptecredit = sc.nextInt();
+        // Test de la méthode de virement
+        System.out.println(BLUE_BOLD +
+            "============================================== TEST DE LA MÉTHODE DE VIREMENT ==============================================" +
+            RESET);
 
-        System.out.println("VEUILLEZ RECHERCHEZ SAISIR LE MONTANT DU VIREMENT :");
+        System.out.print("Veuillez saisir le numéro de compte à débiter : ");
+        int numCompteDebit = sc.nextInt();
+
+        System.out.print("Veuillez saisir le numéro de compte à créditer : ");
+        int numCompteCredit = sc.nextInt();
+
+        System.out.print("Veuillez saisir le montant du virement : ");
         int montant = sc.nextInt();
 
-        if (maBanque.transferer(numComptedebit, numComptecredit, montant) == true) {
-            System.out.println("LE VIREMENT A ETE AUTORISÉ ");
+        if (maBanque.transferer(numCompteDebit, numCompteCredit, montant)) {
+            System.out.println("Le virement a été autorisé.");
         } else {
-            System.out.println(" VIREMENT NON AUTORISÉ");
+            System.out.println("Virement non autorisé.");
         }
 
-        System.out.println(
-                "------------------------------------- AFFICHER LES COMPTES DE LA BANQUE ---------------------------------------------------");
+        // Affichage final des comptes
+        System.out.println(BLUE_BOLD +
+            "============================================== AFFICHER LES COMPTES (APRÈS VIREMENT) ==========================================" +
+            RESET);
         maBanque.afficherComptes();
 
         sc.close();
-
     }
 }
