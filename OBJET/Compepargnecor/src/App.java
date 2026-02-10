@@ -27,7 +27,7 @@ public class App {
         int[] montab = { 0 };
 
         System.out.println(
-                " ---------------------------------------VEUILLEZ RECHERCHER UN NUMERO DE COMPTE--------------------------------------------");
+                "---------------------------------------VEUILLEZ RECHERCHER UN NUMERO DE COMPTE--------------------------------------------");
         numCompte = sc.nextInt();
         if (maBanque.rechercherCompte(numCompte, montab) != null) {
             System.out.println("LE COMPTE RECGERCHRE PAR NUMERO: " + maBanque.rechercherCompte(numCompte, montab)
