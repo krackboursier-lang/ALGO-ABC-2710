@@ -12,6 +12,11 @@ public class Fraction_1 {
         this.reduire();
     }
 
+    @Override
+    public String toString() {
+        return this.numerateur + "/" + this.denominateur;
+    }
+
     public Fraction_1(int numerateur) {
         this(numerateur, 1);
     }
