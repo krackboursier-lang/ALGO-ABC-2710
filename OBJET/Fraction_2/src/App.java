@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-import boudary.Ecran; // Vérifie que le package est correct (boudary -> boundary)
+import boudary.Ecran; 
 import models.Fraction_2;
 
 public class App {

@@ -3,6 +3,10 @@ public class Ecran {
     public static void affiche(Fraction f) {
         String reset = "\u001B[0m";
         String cyan = "\u001B[36m";
+
+        if (f.getDenominateur()==1) {
+             System.out.println(cyan + f.getNumerateur() +  reset);
+        }
         System.out.println(cyan + f.getNumerateur() + "/" + f.getDenominateur() + reset);
     }
 

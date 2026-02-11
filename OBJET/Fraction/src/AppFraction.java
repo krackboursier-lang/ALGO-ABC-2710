@@ -66,7 +66,7 @@ public class AppFraction {
         Ecran.afficheMessage("\n" + gras + bleu + "=========================TEST POUR LE PGCD==============================================" + reset,
                 bleu);
         Fraction f10 = new Fraction(-75, 90);
-        System.out.println(jaune + "PGCD de -75 et 90 : " + bleu + f10.getPgcd() + reset);
+      //  System.out.println(jaune + "PGCD de -75 et 90 : " + bleu + f10.getPgcd() + reset);
 
         // Tests pour les opérations arithmétiques
         Ecran.afficheMessage("\n" + gras + bleu
