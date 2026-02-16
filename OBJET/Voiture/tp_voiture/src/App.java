@@ -10,13 +10,13 @@ public class App {
 
     double resultat = renaulVoiture.VitesseMaxVoiture();
     System.out.println(
-        "========================== VITESSE MAX : " + resultat + " KM/H =========================================");
+        "======================================== VITESSE MAX : " + resultat + " KM/H =========================================");
 
     Moteur moteurRenault = new Moteur(317, " RENAULT ");
     Voituredecourse renaultF1 = new Voituredecourse(" RENAULT F1 ", 750, moteurRenault);
     System.out.println(renaultF1);
  double resultatF1 = renaultF1.VitesseMaxVoiture();
-     System.out.println("========================== VITESSE MAX : " + resultatF1 + " KM/H =========================================");
+     System.out.println("===================================== VITESSE MAX : " + resultatF1 + " KM/H ============================================");
 
  
   }

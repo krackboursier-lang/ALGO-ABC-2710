@@ -18,13 +18,14 @@ public class Voiture {
 		this.le_moteur = le_moteur;
 		this.poids = poids;
 	}
-public Voiture(){
-this.marque="";
-this.modele="";
-this.poids=0;
 
+	public Voiture() {
+		this.marque = "";
+		this.modele = "";
+		this.poids = 0;
 
-}
+	}
+
 	public String toString() {
 		return "Voiture [marque = " + marque + ", modele = " + modele + ", poids = " + poids + ", moteur = "
 				+ le_moteur.getmarque() + "] ";
