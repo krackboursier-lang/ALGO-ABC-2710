@@ -1,4 +1,4 @@
-package VOITURE;
+package voiture;
 
 /**
  * @author STebib
@@ -18,10 +18,16 @@ public class Voiture {
 		this.le_moteur = le_moteur;
 		this.poids = poids;
 	}
+public Voiture(){
+this.marque="";
+this.modele="";
+this.poids=0;
 
+
+}
 	public String toString() {
 		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur="
-				+ le_moteur.getMarque() + "] ";
+				+ le_moteur.getmarque() + "] ";
 	}
 
 	// getters
@@ -38,8 +44,8 @@ public class Voiture {
 	}
 
 	public double VitesseMaxVoiture() {
-		Voiture vitesseMax = this.Moteur.getVitesseMax() - (this.poids*0.03);
-		return le_moteur.getVitesseMax();
+		double vitesseMax = this.le_moteur.getvitesseMax() - (this.poids * 0.03);
+		return vitesseMax;
 	}
 
 	/**
@@ -47,7 +53,7 @@ public class Voiture {
 	 * @param newVal
 	 */// setters
 	public void setmarque(String marque) {
-		marque = marque;
+		this.marque = marque;
 	}
 
 	/**
@@ -55,7 +61,7 @@ public class Voiture {
 	 * @param newVal
 	 */
 	public void setmodele(String modele) {
-		modele = modele;
+		this.modele = modele;
 	}
 
 	/**
@@ -63,17 +69,12 @@ public class Voiture {
 	 * @param newVal
 	 */
 	public void setpoids(double poids) {
-		poids = poids;
+		this.poids = poids;
 	}
 
 	public String toString1() {
 		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur="
-				+ le_moteur.getMarque() + "] ";
-	}
-
-	public String Infos() {
-		return this.toString();
-		return infos;
+				+ le_moteur.getmarque() + "] ";
 	}
 
 	/**
