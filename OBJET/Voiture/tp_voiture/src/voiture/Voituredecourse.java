@@ -15,7 +15,7 @@ public class Voituredecourse extends Voiture {
     @Override
     public String toString() {
 
-        return "Voiture [marque=" + marque + ", poids=" + poids + ", vitesseMax="
+        return "Voiture [marque = " + marque + ", poids = " + poids + ", vitesseMax = "
                 + le_moteur.getVitesseMax() + " KM/H ] ";
     }
 

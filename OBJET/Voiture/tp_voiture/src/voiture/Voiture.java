@@ -26,7 +26,7 @@ this.poids=0;
 
 }
 	public String toString() {
-		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur="
+		return "Voiture [marque = " + marque + ", modele = " + modele + ", poids = " + poids + ", moteur = "
 				+ le_moteur.getmarque() + "] ";
 	}
 
@@ -73,7 +73,7 @@ this.poids=0;
 	}
 
 	public String toString1() {
-		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur="
+		return "Voiture [marque = " + marque + ", modele = " + modele + ", poids = " + poids + ", moteur = "
 				+ le_moteur.getmarque() + "] ";
 	}
 
