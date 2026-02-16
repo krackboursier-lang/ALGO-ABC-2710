@@ -31,20 +31,12 @@ public class Moteur {
 
 	}
 
-	public String getMarque(String newVal ){ // getters
-		this.marque= marque ;
+	// getters
+	public String getMarque(String newVal) {
+		this.marque = marque;
 	}
-
-	public int VitesseMax(){
-		return VitesseMax();
-	}
-
-	public String Marque(){
-		<unknown> = newVal;
-	}
-
-	public int VitesseMax(){
-		<unknown> = newVal;
-	}
+public int getVitesseMax (){
+	return vitesseMax;
+}
 
 }

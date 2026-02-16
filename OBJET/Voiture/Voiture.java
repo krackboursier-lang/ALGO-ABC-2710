@@ -20,30 +20,33 @@ public class Voiture {
 	}
 
 	public String toString() {
-		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur=" + le_moteur.getMarque() + "] ";}
-
-	public String getmarque() { // getters
-		return marque;
+		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur="
+				+ le_moteur.getMarque() + "] ";
 	}
 
+	// getters
+	public String getmarque() {
+		return marque;
+	}
 
 	public String getmodele() {
 		return modele;
 	}
 
-	public double getpoids( ) {	
+	public double getpoids() {
 		return poids;
 	}
 
 	public double VitesseMaxVoiture() {
+		Voiture vitesseMax = this.Moteur.getVitesseMax() - (this.poids*0.03);
 		return le_moteur.getVitesseMax();
 	}
 
 	/**
 	 * 
 	 * @param newVal
-	 */
-	public void setmarque(String marque) { // setters
+	 */// setters
+	public void setmarque(String marque) {
 		marque = marque;
 	}
 
@@ -64,7 +67,8 @@ public class Voiture {
 	}
 
 	public String toString1() {
-		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur=" + le_moteur.getMarque() + "] ";
+		return "Voiture [marque=" + marque + ", modele=" + modele + ", poids=" + poids + ", moteur="
+				+ le_moteur.getMarque() + "] ";
 	}
 
 	public String Infos() {
@@ -82,5 +86,4 @@ public class Voiture {
 	public Voiture(String _marque, int _model, Moteur _moteur, int _poids) {
 	}
 
-	}
-
+}
