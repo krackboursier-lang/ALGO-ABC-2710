@@ -27,6 +27,7 @@ public class Voiture {
 	}
 
 	public String toString() {
+
 		return "Voiture [marque = " + marque + ", modele = " + modele + ", poids = " + poids + ", moteur = "
 				+ le_moteur.getmarque() + "] ";
 	}
