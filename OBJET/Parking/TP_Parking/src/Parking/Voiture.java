@@ -7,26 +7,25 @@ package Parking;
  */
 public class Voiture extends Vehicule {
 
-	private int nombreDeportes;
+	protected int nombreDeportes;
 
-	public Voiture(){
+	public Voiture() {
 
-	}
-
-	public void finalize() throws Throwable {
-		super.finalize();
 	}
 
 	/**
 	 * 
 	 * @param _nomdePorte
 	 */
-	public Voiture(int _nomdePorte){
-
+	public Voiture(String _plaqueImmatriclation, String _marque, int _nomdePorte) {
+		super(_plaqueImmatriclation, _marque);
+		this.nombreDeportes = _nomdePorte;
 	}
 
-	public int getnombreDeportes(){
+	public int getnombreDeportes() {
 		return nombreDeportes;
 	}
-
+public String toString(){
+	return super.toString()+" NOMBRE DE PORTE "+this.nombreDeportes;
+}
 }
