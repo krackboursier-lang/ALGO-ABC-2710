@@ -31,10 +31,10 @@ public class Parking {
      */
     public void afficherVehicule() {
         if (this.liste.isEmpty()) {
-            System.out.println(Couleurs.JAUNE + "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<AUCUN VEHICULE DANS LE PARKING. "
+            System.out.println(Couleurs.BLEU + "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<AUCUN VEHICULE DANS LE PARKING. "
                     + Couleurs.RESET);
         } else {
-            System.out.println(Couleurs.BLEU
+            System.out.println(Couleurs.JAUNE
                     + "<<<<<<<<<<<<<<<<<<<<<<<<<LISTE DES VEHICULES DANS LE PARKING :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
                     + Couleurs.RESET);
             for (Vehicule v : this.liste) {
