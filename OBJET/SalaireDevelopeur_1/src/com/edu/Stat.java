@@ -94,7 +94,35 @@ public class Stat {
     }
 
     public double[] CalculerQuartile() {
-        return null;
+        double[] quartiles = new double[3];
+
+        if (nbelement % 4 == 0) {
+
+            quartiles[0] = mydata.get(nbelement / 4);
+        }
+
+        else {
+            double moyenneSal = (mydata.get((int) Math.floor(nbelement / 4))
+                    + mydata.get((int) Math.ceil(nbelement / 4)) + mydata.get((int) Math.floor(nbelement / 2))
+                    + mydata.get((int) Math.ceil(nbelement / 2)) + mydata.get((int) Math.floor(3 * nbelement / 4))
+                    + mydata.get((int) Math.ceil(3 * nbelement / 4))) / 2;
+
+            quartiles[0] = moyenneSal;
+        }
+        quartiles[1] = this.calculerMediane();
+        quartiles[2] = this.calculerMediane();
+
+        if (this.nbelement * 3 % 4 == 0) {
+
+            quartiles[2] = mydata.get(nbelement * 3 / 4);
+        } else {
+            double moyenneSal2 = (mydata.get((int) Math.floor(nbelement * 3 / 4))
+                    + mydata.get((int) Math.ceil(3 * nbelement / 4))) / 2;
+            quartiles[2] = moyenneSal2;
+        }
+
+        return quartiles;
+
     }
 
     private double calcularrondi(double _nombre, int decimal) {

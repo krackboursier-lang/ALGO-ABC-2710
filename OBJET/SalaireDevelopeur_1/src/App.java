@@ -23,19 +23,22 @@ public class App {
         }
         Stat objetStat = new Stat(dataSalaire);
         System.out.println(
-
-                "--------------------------------------------------------------------------------------------------------<< Affichage de la moyenne de l'échantillon de salaire des métiers de l'informatique >>---------------");
+                "-------------------------------------------------------------------------------------<< Affichage de la moyenne de l'échantillon de salaire des métiers de l'informatique >>---------------");
         double moyenne = objetStat.calculerMoyenne();
         System.out.println("salaire moyen de l'echantillon:" + moyenne + " Euros");
 
         System.out.println(
-                "-----------------------<< Affichage de l'ecart type l'échantillon de salaire des métiers de l'informatique >>---------------");
+                "-------------------------<< Affichage de l'ecart type l'échantillon de salaire des métiers de l'informatique >>---------------");
         double ecart = objetStat.calculerEcartType();
-        System.out.println("ecart type à moyenne + ou - :" + ecart + " Euros");
+        System.out.println("ecart type à moyenne + ou - :" + ecart + "Euros");
 
         System.out.println(
-                "-----------------------<< Affichage de la valeur mediane de l'échantillon de salaire des métiers de l'informatique >>---------------");
+                "-------------------------<< Affichage de quartilles de salaire des métiers de l'informatique >>---------------");
 
-        System.out.println("Salaire median :" + objetStat.calculerMediane() + " Euros");
+        double[] quartiles = objetStat.CalculerQuartile();
+        for (int i = 0; i < quartiles.length; i++) {
+            System.out.println(" Quartile " + (i + 1) + " : " + quartiles[i] + " Euros");
+        }
+
     }
 }
