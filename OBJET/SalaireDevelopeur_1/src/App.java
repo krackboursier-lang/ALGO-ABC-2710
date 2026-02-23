@@ -28,12 +28,12 @@ public class App {
         System.out.println("salaire moyen de l'echantillon:" + moyenne + " Euros");
 
         System.out.println(
-                "-------------------------<< Affichage de l'ecart type l'échantillon de salaire des métiers de l'informatique >>---------------");
+                "---------------------------------<< Affichage de l'ecart type l'échantillon de salaire des métiers de l'informatique >>---------------");
         double ecart = objetStat.calculerEcartType();
         System.out.println("ecart type à moyenne + ou - :" + ecart + "Euros");
 
         System.out.println(
-                "-------------------------<< Affichage de quartilles de salaire des métiers de l'informatique >>---------------");
+                "---------------------------------<< Affichage de quartilles de salaire des métiers de l'informatique >>---------------");
 
         double[] quartiles = objetStat.CalculerQuartile();
         for (int i = 0; i < quartiles.length; i++) {
