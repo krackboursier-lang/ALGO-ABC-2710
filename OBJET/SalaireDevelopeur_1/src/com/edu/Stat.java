@@ -10,92 +10,95 @@ import java.util.Comparator;
  * @created 16-fevr.-2026 17:03:14
  */
 public class Stat {
- // attributs
- private ArrayList<Double> mydata = new ArrayList<Double>();
- private int nbelement;
+    // attributs
+    private ArrayList<Double> mydata = new ArrayList<Double>();
+    private int nbelement;
 
- // constructeur
- public Stat(ArrayList<Double> montab) {
-  this.mydata.addAll(montab);
-  //tri des données
-  Collections.sort(this.mydata);
-  this.nbelement = mydata.size();
- }
- // destructeur
- public void finalize() throws Throwable {
+    // constructeur
+    public Stat(ArrayList<Double> montab) {
+        this.mydata.addAll(montab);
+        // tri des données
+        Collections.sort(this.mydata);
+        this.nbelement = mydata.size();
+    }
 
- }
+    // destructeur
+    public void finalize() throws Throwable {
 
- /**
-  * accesseur du tableau de données
-  * 
-  * @return ArrayList
-  */
+    }
 
- public ArrayList<Double> getmydata() {
-  return mydata;
- }
- /**
-  * accesseur du nombre d'elements
-  * @return int 
-  */
- public int getnbelement(){
-  return nbelement;
- }
- /**
-  * modifieur
-  * @param newVal
-  */
- public void setmydata(ArrayList<Double> _newVal) {
-  this.mydata = _newVal;
- }
+    /**
+     * accesseur du tableau de données
+     * 
+     * @return ArrayList
+     */
 
- public double calculerMoyenne() {
-  double resultat = 0;
-  for (Double valeur : mydata) {
-   resultat += valeur;
+    public ArrayList<Double> getmydata() {
+        return mydata;
+    }
 
-  }
-  resultat /= this.nbelement;
+    /**
+     * accesseur du nombre d'elements
+     * 
+     * @return int
+     */
+    public int getnbelement() {
+        return nbelement;
+    }
 
-  return calcularrondi(resultat, 3);
- }
+    /**
+     * modifieur
+     * 
+     * @param newVal
+     */
+    public void setmydata(ArrayList<Double> _newVal) {
+        this.mydata = _newVal;
+    }
 
+    public double calculerMoyenne() {
+        double resultat = 0;
+        for (Double valeur : mydata) {
+            resultat += valeur;
 
+        }
+        resultat /= this.nbelement;
 
- public double calculerMediane() {
+        return calcularrondi(resultat, 3);
+    }
 
-  // mydata.sort(Comparator.naturalOrder()); >=java 8
-  // mydata.sort(Comparator.reverseOrder());>=java 8
+    public double calculerMediane() {
 
-  if (this.nbelement % 2 == 0) {
-   double mediane = (mydata.get(this.nbelement / 2) + mydata.get((this.nbelement / 2) - 1)) / 2;
-   return mediane;
+        // mydata.sort(Comparator.naturalOrder()); >=java 8
+        // mydata.sort(Comparator.reverseOrder());>=java 8
 
-  }
+        if (this.nbelement % 2 == 0) {
+            double mediane = (mydata.get(this.nbelement / 2) + mydata.get((this.nbelement / 2) - 1)) / 2;
+            return mediane;
 
-  return mydata.get(this.nbelement / 2);
- }
+        }
 
- public double calculerEcartType() {
-  double temp = 0;
-  final double MOY = this.calculerMoyenne();
-  double res = 0;
-  for (Double val : this.mydata) {
-   temp += Math.pow((val - MOY), 2);
-  }
-  temp /= this.nbelement;
-  res = Math.sqrt(temp);
+        return mydata.get(this.nbelement / 2);
+    }
 
-  return calcularrondi(res, 3);
- }
+    public double calculerEcartType() {
+        double temp = 0;
+        final double MOY = this.calculerMoyenne();
+        double res = 0;
+        for (Double val : this.mydata) {
+            temp += Math.pow((val - MOY), 2);
+        }
+        temp /= this.nbelement;
+        res = Math.sqrt(temp);
 
- public double [] CalculerQuartile(){
- return null;
- }
+        return calcularrondi(res, 3);
+    }
 
- private double calcularrondi(double _nombre, int decimal) {
-  return (double) ((long) (Math.pow(10, decimal) * _nombre + 0.5)) / Math.pow(10, decimal);
+    public double[] CalculerQuartile() {
+        return null;
+    }
 
- }
+    private double calcularrondi(double _nombre, int decimal) {
+        return (double) ((long) (Math.pow(10, decimal) * _nombre + 0.5)) / Math.pow(10, decimal);
+
+    }
 }
